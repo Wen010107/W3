@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>意見反饋</title>
+<link rel="stylesheet" href="css/contact.css">
+<script src="js/auth.js"></script>
+</head>
+<body>
+
+<!-- 使用者右上角 -->
+<span id="userMenu">
+  <span id="userAvatar"></span>
+  <span id="userName"></span>
+</span>
+
+<div class="contact-container">
+  <button class="back-btn" onclick="history.back()">← 回上一頁</button>
+  <h2>意見反饋 📝</h2>
+
+  <form id="feedbackForm">
+    <label for="name">姓名 (可選)</label>
+    <input type="text" id="name" name="name" placeholder="可留空匿名提交">
+
+    <label for="email">Email (可選)</label>
+    <input type="email" id="email" name="email" placeholder="方便回覆">
+
+    <label for="type">反饋類型</label>
+    <select id="type" name="type" required>
+      <option value="">請選擇</option>
+      <option value="網站建議">網站建議</option>
+      <option value="商品問題">商品問題</option>
+      <option value="付款問題">付款問題</option>
+      <option value="其他">其他</option>
+    </select>
+
+    <label for="message">反饋內容</label>
+    <textarea id="message" name="message" rows="6" placeholder="請描述您的意見或問題" required></textarea>
+
+    <button type="submit">送出反饋</button>
+  </form>
+
+  <div id="successMessage" style="display:none; color:rgb(232, 24, 24); margin-top:15px;">
+    感謝您的反饋，我們會盡快處理！
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById("feedbackForm");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault(); // 防止表單實際送出
+
+    const type = document.getElementById("type").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if(!type || !message){
+      alert("請完整填寫反饋類型與內容！");
+      return;
+    }
+
+    // 模擬送出
+    successMessage.style.display = "block";
+    form.reset();
+    // 延遲 1.5 秒後跳回首頁
+  setTimeout(() => {
+    form.reset();
+    location.href = "index.html";
+  }, 1500);
+  });
+</script>
+
+</body>
+</html>

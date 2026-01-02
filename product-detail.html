@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品詳情｜寵物用品商店</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- ⚠️ 先載入資料 -->
+<script src="js/product-data.js"></script>
+<!-- ⚠️ 再載入使用資料的邏輯 -->
+<script src="js/product-detail.js"></script>
+</head>
+<body>
+<div class="product-detail" id="product-detail">
+    <img src="" alt="" id="product-img">
+    <h2 id="product-name"></h2>
+    <p id="product-price"></p>
+    <p id="product-weight"></p>
+    <p id="product-desc"></p>
+    <div class="features" id="features"></div>
+    <!-- 尺寸選單容器 -->
+    <div class="size-select-container"></div>
+    <div class="quantity">
+        <button id="minus">-</button>
+        <input type="number" id="qty" value="1" min="1">
+        <button id="plus">+</button>
+    </div>
+
+    <div class="buttons">
+        <button id="add-cart">加入購物車</button>
+        <button onclick="history.back()">回上一頁</button>
+    </div>
+</div>
+</body>
+</html>

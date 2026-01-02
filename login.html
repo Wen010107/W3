@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>會員登入｜寵物用品商店</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/login.js"></script>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <h1>寵物用品商店</h1>
+</header>
+<!-- 登入區 -->
+<div class="login-page">
+  <div class="login-card">
+    <h2>🐾 會員登入</h2>
+    <p>請輸入帳號、密碼與驗證碼</p>
+    <input type="text" id="loginAccount" placeholder="帳號">
+    <input type="password" id="loginPassword" placeholder="密碼">
+    <!-- 驗證碼 -->
+    <div class="captcha-box">
+      <span id="loginCaptchaCode"></span>
+      <button type="button" onclick="generateLoginCaptcha()">換一張</button>
+    </div>
+    <input type="text" id="loginCaptchaInput" placeholder="請輸入驗證碼">
+    <button onclick="login()">登入</button>
+    <div class="login-links">
+      還沒有帳號？<a href="register.html">立即註冊</a>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 寵物用品商店 | All Rights Reserved</p>
+</footer>
+</body>
+</html>

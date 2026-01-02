@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品頁｜寵物用品商店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/auth.js"></script>
+    <script src="js/product.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>寵物用品商店</h1></div>
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu" id="nav-menu">
+            <li><a href="index.html">首頁</a></li>
+            <li class="dropdown">
+                <a href="products.html" class="menu-item">商品 ▾</a>
+                <ul class="dropdown-menu category-menu">
+                    <li class="sub-dropdown">
+                        <a href="products.html?animal=all&type=all" data-animal="all" data-type="all">所有用品 ▶</a>
+                    </li>
+                    <li class="sub-dropdown">
+                        <a href="#" class="menu-item" data-animal="dog" data-type="all">狗狗用品 ▶</a>
+                        <ul class="sub-menu">
+                            <li><a href="#" data-animal="dog" data-type="clothes">衣服</a></li>
+                    <li><a href="#" data-animal="dog" data-type="food">飼料</a></li>
+                    <li><a href="#" data-animal="dog" data-type="toy">玩具</a></li>
+                    <li><a href="#" data-animal="dog" data-type="snack">零食</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-dropdown">
+                        <a href="#" class="menu-item" data-animal="cat" data-type="all">貓咪用品 ▶</a>
+                        <ul class="sub-menu">
+                           <li><a href="#" data-animal="cat" data-type="clothes">衣服</a></li>
+                    <li><a href="#" data-animal="cat" data-type="food">飼料</a></li>
+                    <li><a href="#" data-animal="cat" data-type="toy">玩具</a></li>
+                    <li><a href="#" data-animal="cat" data-type="snack">零食</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="cart.html">購物車</a></li>
+            <li><a href="contact.html">聯繫我們</a></li>
+            <li id="loginItem"><a href="login.html" id="login-btn">登入</a></li>
+            <li class="user-dropdown" id="userMenu" style="display:none;">
+                <span class="user-trigger">
+                    <span id="userAvatar"></span>
+                    <span id="userName"></span>
+                </span>
+                <ul class="user-dropdown-menu">
+                    <li><a href="#" id="logoutBtn">登出</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="promo-marquee"> 
+    <div class="marquee-content"> 
+        <span>🔥 部分商品限時 8 折，要買要快！活動只到 1/09 23:59 &nbsp; • &nbsp;</span> 
+        <span>🔥 部分商品限時 8 折，要買要快！活動只到 1/09 23:59 &nbsp; • &nbsp;</span> 
+        <span>🔥 部分商品限時 8 折，要買要快！活動只到 1/09 23:59 &nbsp; • &nbsp;</span> 
+    </div> 
+</div>   
+
+<main>
+     <!-- 商品列表 -->
+    <div class="product-list">
+    <!-- 狗狗商品 -->
+    <div class="product-card" data-product="dog-food-1" data-animal="dog" data-type="food">
+        <div class="discount-badge">限時 8 折</div>
+        <img src="img/02.jpg" alt="成犬狗糧">
+        <h3>高品質成犬狗糧</h3>
+            <p>
+                <span class="old-price">NT$1500</span>
+                <span class="new-price">NT$1200</span>
+            </p>
+        <div class="countdown-date">
+            ⏰ 至 <span class="end-date">2026/01/09 23:59:59</span><br>
+             剩餘 <span class="timer"></span>
+        </div>
+        <a href="product-detail.html?product=dog-food-1" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="food">
+        <img src="img/02-1.png" alt="幼犬狗糧">
+        <h3>高品質幼犬狗糧</h3>
+        <p>NT$800</p>
+        <a href="product-detail.html?product=dog-food-2" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="food">
+            <img src="img/02-9.png" alt="成犬狗糧">
+            <h3>狗食乾糧-雞肉及蔬菜口味</h3>
+            <p>NT$600</p>
+            <a href="product-detail.html?product=dog-food-3" class="btn">查看詳情</a>
+         </div>
+    <div class="product-card" data-animal="dog" data-type="food">
+            <img src="img/02-10.jpg" alt="幼犬狗糧">
+            <h3>UNCLE PAUL保羅叔叔高級狗糧-雞肉糙米</h3>
+            <p>NT$950</p>
+            <a href="product-detail.html?product=dog-food-4" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="food">
+            <img src="img/02-11.jpg" alt="幼犬狗糧">
+            <h3>UNCLE PAUL保羅叔叔高級狗糧-三鮮高蛋白</h3>
+            <p>NT$550</p>
+            <a href="product-detail.html?product=dog-food-5" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="snack">
+            <img src="img/02-7.png" alt="狗狗零食">
+            <h3> 德國 Vegdog｜夾心脆脆</h3>
+            <p>NT$270</p>
+            <a href="product-detail.html?product=dog-snack-1" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="snack">
+            <img src="img/02-8.png" alt="狗狗零食">
+            <h3> 美國 HALO｜低敏舒膚 - 香蕉花生酥餅</h3>
+            <p>NT$225</p>
+            <a href="product-detail.html?product=dog-snack-2" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="snack">
+            <img src="img/02-12.png" alt="狗狗零食">
+            <h3>美國 HALO｜低敏舒膚 - 南瓜花生酥餅</h3>
+            <p>NT$225</p>
+            <a href="product-detail.html?product=dog-snack-3" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="snack">
+            <img src="img/02-13.png" alt="狗狗零食">
+            <h3>德國 Vegdog｜天然無添加植物NEW肉條</h3>
+            <p>NT$220</p>
+            <a href="product-detail.html?product=dog-snack-4" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-product="dog-snack-5" data-animal="dog" data-type="snack">
+    <div class="discount-badge">限時 8 折</div>
+            <img src="img/02-17.png" alt="狗狗零食">
+            <h3>【 Lily's Kitchen 莉莉廚房 】熱帶芒果乾</h3>
+            <p>
+                <span class="old-price">NT$220</span>
+                <span class="new-price">NT$176</span>
+            </p>
+        <div class="countdown-date">
+            ⏰ 至 <span class="end-date">2026/01/09 23:59:59</span><br>
+            剩餘 <span class="timer"></span>
+        </div>
+        <a href="product-detail.html?product=dog-snack-5" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="toy">
+            <img src="img/02-16.png" alt="狗狗玩具">
+            <h3>Non-stop dogwear |繩索咬球</h3>
+            <p>NT$500</p>
+            <a href="product-detail.html?product=dog-toy-1" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="toy">
+            <img src="img/02-4.png" alt="狗狗玩具">
+            <h3>【美國DURAFORCE】經典骨頭-藍綠色</h3>
+            <p>NT$420</p>
+            <a href="product-detail.html?product=dog-toy-2" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="toy">
+            <img src="img/02-14.png" alt="狗狗玩具">
+            <h3>Non-stop dogwear | 狗狗專用玩球</h3>
+            <p>NT$400</p>
+            <a href="product-detail.html?product=dog-toy-3" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-product="dog-toy-4" data-animal="dog" data-type="toy">
+        <div class="discount-badge">限時 8 折</div>
+        <img src="img/02-15.png" alt="狗狗玩具">
+    <h3>Non-stop dogwear | 飛盤</h3>
+            <p>
+                <span class="old-price">NT$690</span>
+                <span class="new-price">NT$552</span>
+            </p>
+            <div class="countdown-date">
+                ⏰ 至 <span class="end-date">2026/01/09 23:59:59</span><br>
+                剩餘 <span class="timer"></span>
+            </div>
+            <a href="product-detail.html?product=dog-toy-4" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="clothes">
+        <img src="img/03.png" alt="狗狗衣服">
+        <h3>恐龍大學Ｔ狗狗衣服</h3>
+        <p>NT$590</p>
+        <a href="product-detail.html?product=dog-clothes-1" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="dog" data-type="clothes">
+        <img src="img/02-5.png" alt="狗狗衣服">
+        <h3>狗狗輕鋒衣</h3>
+        <p>NT$550</p>
+        <a href="product-detail.html?product=dog-clothes-2" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-product="dog-clothes-3" data-animal="dog" data-type="clothes">
+    <div class="discount-badge">限時 8 折</div>
+        <img src="img/03-10.png" alt="狗狗衣服">
+        <h3>狗狗立領衝鋒衣</h3>
+        <p>
+            <span class="old-price">NT$880</span>
+            <span class="new-price">NT$704</span>
+        </p>
+        <div class="countdown-date">
+            ⏰ 至 <span class="end-date">2026/01/09 23:59:59</span><br>
+            剩餘 <span class="timer"></span>
+        </div>
+        <a href="product-detail.html?product=dog-clothes-3" class="btn">查看詳情</a>
+        </div>
+    <div class="product-card" data-animal="dog" data-type="clothes">
+        <img src="img/03-11.png" alt="狗狗衣服">
+        <h3>萌獸刷毛背心恐龍裝</h3>
+        <p>NT$880</p>
+        <a href="product-detail.html?product=dog-clothes-4" class="btn">查看詳情</a>
+    </div>
+        <!---零食-->
+    <div class="product-card" data-animal="cat" data-type="snack">
+            <img src="img/04-6.png" alt="貓咪零食">
+            <h3> 手撕貓零食化毛大師（膳食纖維）</h3>
+            <p>NT$160</p>
+            <a href="product-detail.html?product=cat-snack-1" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-product="cat-snack-2" data-animal="cat" data-type="snack">
+    <div class="discount-badge">限時 8 折</div>
+        <img src="img/04-7.png" alt="貓咪零食">
+        <h3>貓用羊奶凍乾零食｜雞肉</h3>
+            <p>
+                <span class="old-price">NT$400</span>
+                <span class="new-price">NT$320</span>
+            </p>
+
+        <div class="countdown-date">
+            ⏰ 至 <span class="end-date">2026/01/09 23:59:59</span><br>
+            剩餘 <span class="timer"></span>
+        </div>
+        <a href="product-detail.html?product=cat-snack-2" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="cat" data-type="snack">
+            <img src="img/04-8.png" alt="貓咪零食">
+            <h3>原肉凍乾零食 袋袋鼠狀元(貓)</h3>
+            <p>NT$330</p>
+            <a href="product-detail.html?product=cat-snack-3" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="cat" data-type="snack">
+            <img src="img/04-9.png" alt="貓咪零食">
+            <h3>【等等益生菌凍乾貓零食】紓壓大師（雞肉）</h3>
+            <p>NT$250</p>
+            <a href="product-detail.html?product=cat-snack-4" class="btn">查看詳情</a>
+    </div>
+        <!-- 貓咪商品 -->
+    <div class="product-card" data-animal="cat" data-type="toy">
+            <img src="img/02-2.jpg" alt="貓玩具">
+            <h3>貓咪彈球玩具</h3>
+            <p>NT$150</p>
+            <a href="product-detail.html?product=cat-toy-1" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-product="cat-toy-2" data-animal="cat" data-type="toy">
+    <div class="discount-badge">限時 8 折</div>
+            <img src="img/03-6.png" alt="貓玩具">
+            <h3>Petcare｜可伸縮光纖互動逗貓棒</h3>
+            <p>
+                <span class="old-price">NT$800</span>
+                <span class="new-price">NT$640</span>
+            </p>
+            <div class="countdown-date">
+                ⏰ 至 <span class="end-date">2026/01/09 23:59:59</span><br>
+                剩餘 <span class="timer"></span>
+            </div>
+            <a href="product-detail.html?product=cat-toy-2" class="btn">查看詳情</a>
+    </div>
+        <div class="product-card" data-animal="cat" data-type="toy">
+            <img src="img/03-7.png" alt="貓玩具">
+            <h3>貓壹 奇幻隧道 天空藍</h3>
+            <p>NT$540</p>
+            <a href="product-detail.html?product=cat-toy-3" class="btn">查看詳情</a>
+        </div>
+        <div class="product-card" data-animal="cat" data-type="toy">
+            <img src="img/03-8.png" alt="貓玩具">
+            <h3>icat 魚骨頭咬咬玩具</h3>
+            <p>NT$200</p>
+            <a href="product-detail.html?product=cat-toy-4" class="btn">查看詳情</a>
+        </div>
+        <div class="product-card" data-animal="cat" data-type="toy">
+            <img src="img/03-9.png" alt="貓玩具">
+            <h3>iCAT 橄欖球毛氈玩具</h3>
+            <p>NT$120</p>
+            <a href="product-detail.html?product=cat-toy-5" class="btn">查看詳情</a>
+        </div>
+       <div class="product-card" data-animal="cat" data-type="food">
+            <img src="img/03-1.png" alt="貓咪飼料">
+            <h3>皇家貓飼料</h3>
+            <p>NT$800</p>
+            <a href="product-detail.html?product=cat-food-1" class="btn">查看詳情</a>
+        </div>
+        <div class="product-card" data-animal="cat" data-type="food">
+            <img src="img/03-2.png" alt="貓咪飼料">
+            <h3>85%鮮雞肉無穀全貓糧</h3>
+            <p>NT$790</p>
+            <a href="product-detail.html?product=cat-food-2" class="btn">查看詳情</a>
+        </div>
+        <div class="product-card" data-animal="cat" data-type="food">
+            <img src="img/03-3.png" alt="貓咪飼料">
+            <h3>科克蘭 雞肉&米配方乾貓糧</h3>
+            <p>NT$900</p>
+            <a href="product-detail.html?product=cat-food-3" class="btn">查看詳情</a>
+        </div>
+        <div class="product-card" data-product="cat-food-4" data-animal="cat" data-type="food">
+    <div class="discount-badge">限時 8 折</div>
+        <img src="img/03-4.png" alt="貓咪飼料">
+        <h3>無穀低敏 雞肉藍莓全貓配方</h3>
+            <p>
+                <span class="old-price">NT$1950</span>
+                <span class="new-price">NT$1560</span>
+            </p>
+        <div class="countdown-date">
+            ⏰ 至 <span class="end-date">2026/01/09 23:59:59</span><br>
+            剩餘 <span class="timer"></span>
+        </div>
+        <a href="product-detail.html?product=cat-food-4" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="cat" data-type="food">
+        <img src="img/03-5.png" alt="貓咪飼料">
+        <h3>希爾思 Hill's 成貓 鮭魚糙米全燕麥</h3>
+        <p>NT$1200</p>
+        <a href="product-detail.html?product=cat-food-5" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="cat" data-type="clothes">
+        <img src="img/04-1.png" alt="貓咪衣服">
+        <h3>毛茸茸麋鹿貓披風貓斗篷</h3>
+        <p>NT$750</p>
+        <a href="product-detail.html?product=cat-clothes-1" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-animal="cat" data-type="clothes">
+        <img src="img/04-2.png" alt="貓咪衣服">
+        <h3>櫻桃針織保暖寵物背心</h3>
+        <p>NT$700</p>
+        <a href="product-detail.html?product=cat-clothes-2" class="btn">查看詳情</a>
+    </div>
+    <div class="product-card" data-product="cat-clothes-3" data-animal="cat" data-type="clothes">
+    <div class="discount-badge">限時 8 折</div>
+        <img src="img/04-3.png" alt="貓咪衣服">
+        <h3>窩夫保暖寵物背心</h3>
+        <p>
+            <span class="old-price">NT$650</span>
+            <span class="new-price">NT$520</span>
+        </p>
+        <div class="countdown-date">
+            ⏰ 至 <span class="end-date">2026/01/09 23:59:59</span><br>
+            剩餘 <span class="timer"></span>
+        </div>
+        <a href="product-detail.html?product=cat-clothes-3" class="btn">查看詳情</a>
+    </div>
+     <div class="product-card" data-animal="cat" data-type="clothes">
+        <img src="img/04-4.png" alt="貓咪衣服">
+        <h3>可愛小熊保暖寵物背心 </h3>
+        <h3>*絕版款* </h3>
+        <p>NT$600</p>
+        <a href="product-detail.html?product=cat-clothes-4" class="btn">查看詳情</a>
+    </div>
+     <div class="product-card" data-animal="cat" data-type="clothes">
+        <img src="img/04-5.png" alt="貓咪衣服">
+        <h3>復古愛心保暖寵物背心</h3>
+        <p>NT$650</p>
+        <a href="product-detail.html?product=cat-clothes-5" class="btn">查看詳情</a>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 寵物用品商店 | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

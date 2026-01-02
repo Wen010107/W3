@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寵物用品商店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>寵物用品商店</h1></div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">首頁</a></li>
+            <li class="dropdown">
+                <a href="products.html">商品</a>
+                <ul class="dropdown-menu category-menu">
+                    <li class="sub-dropdown">
+                        <a href="products.html?animal=all&type=all" data-animal="all" data-type="all">所有用品 ▶</a>
+                    </li>
+                    <li class="sub-dropdown">
+                        <a href="products.html?animal=dog&type=all" data-animal="dog" data-type="all">狗狗用品 ▶</a>
+                        <ul class="sub-menu">
+                            <li><a href="products.html?animal=dog&type=clothes" data-animal="dog" data-type="clothes">衣服</a></li>
+                            <li><a href="products.html?animal=dog&type=food" data-animal="dog" data-type="food">飼料</a></li>
+                            <li><a href="products.html?animal=dog&type=toy" data-animal="dog" data-type="toy">玩具</a></li>
+                            <li><a href="products.html?animal=dog&type=snack" data-animal="dog" data-type="snack">零食</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-dropdown">
+                        <a href="products.html?animal=cat&type=all" data-animal="cat" data-type="all">貓咪用品 ▶</a>
+                        <ul class="sub-menu">
+                            <li><a href="products.html?animal=cat&type=clothes" data-animal="cat" data-type="clothes">衣服</a></li>
+                            <li><a href="products.html?animal=cat&type=food" data-animal="cat" data-type="food">飼料</a></li>
+                            <li><a href="products.html?animal=cat&type=toy" data-animal="cat" data-type="toy">玩具</a></li>
+                            <li><a href="products.html?animal=cat&type=snack" data-animal="cat" data-type="snack">零食</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="cart.html">購物車</a></li>
+            <li><a href="contact.html">聯繫我們</a></li>
+            <li id="loginItem"><a href="login.html" id="login-btn">登入</a></li>
+            <li class="user-dropdown" id="userMenu" style="display:none;">
+                <span class="user-trigger">
+                    <span id="userAvatar"></span>
+                    <span id="userName"></span>
+                </span>
+                <ul class="user-dropdown-menu">
+                    <li><a href="#" id="logoutBtn">登出</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="promo-marquee">
+    <div class="marquee-content">
+        <span>全館滿1300免運，滿1000折100 &nbsp; • &nbsp;</span>
+        <span>全館滿1300免運，滿1000折100 &nbsp; • &nbsp;</span>
+        <span>全館滿1300免運，滿1000折100 &nbsp; • &nbsp;</span>
+    </div>
+</div>
+
+<main>
+    <section class="hero">
+        <img src="img/01.png" alt="寵物用品商店" class="hero-img" style="width:100%;">
+        <div class="hero-text">
+            <h2>給你的寵物最好的照顧！</h2>
+            <p>發現各種高品質的寵物用品，讓你的毛孩更開心健康。</p>
+            <a href="products.html" class="shop-now-btn">立即購買</a>
+        </div>
+    </section>
+
+    <section class="brand-advantages">
+        <h2>💎 我們的品牌優勢</h2>
+        <div class="advantages-list">
+            <div class="advantage-card">
+                <img src="img/05.png" alt="高品質">
+                <h3>高品質商品</h3>
+                <p>嚴選原料，讓寵物健康又安心。</p>
+            </div>
+            <div class="advantage-card">
+                <img src="img/05-1.png" alt="快速配送">
+                <h3>快速配送</h3>
+                <p>24 小時內出貨，快速送達您手中。</p>
+            </div>
+            <div class="advantage-card">
+                <img src="img/05-2.png" alt="優質服務">
+                <h3>優質服務</h3>
+                <p>客服專員貼心服務，隨時為您解答疑問。</p>
+            </div>
+            <div class="advantage-card">
+                <img src="img/05-3.jpg" alt="天然健康">
+                <h3>天然健康</h3>
+                <p>無添加化學成分，讓毛孩吃得安心。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2 style="text-align:center;">🔥 熱銷商品</h2>
+        <div class="product-list">
+            <div class="product-card" data-animal="dog" data-type="food">
+                <span class="discount-badge">限時 8 折</span>
+                <img src="img/02.jpg" alt="成犬狗糧">
+                <h3>高品質成犬狗糧</h3>
+                <p>
+                    <span style="text-decoration: line-through; color:#999;">NT$1500</span>
+                    <span style="color:red; font-weight:bold; margin-left:6px;">NT$1200</span>
+                </p>
+                <div class="countdown-date">
+    ⏰ 至 <span class="end-date">2026/01/09 23:59:59</span><br>
+    剩餘 <span class="timer"></span>
+</div>
+
+                <a href="product-detail.html?product=dog-food-1" class="btn">查看詳情</a>
+            </div>
+            <div class="product-card" data-animal="dog" data-type="food">
+                <img src="img/02-1.jpeg" alt="幼犬狗糧">
+                <h3>高品質幼犬狗糧</h3>
+                <p>NT$800</p>
+                <a href="product-detail.html?product=dog-food-2" class="btn">查看詳情</a>
+            </div>
+            <div class="product-card" data-animal="cat" data-type="toy">
+                <img src="img/02-2.jpg" alt="貓玩具">
+                <h3>貓咪彈球款玩具</h3>
+                <p>NT$150</p>
+                <a href="product-detail.html?product=cat-toy-1" class="btn">查看詳情</a>
+            </div>
+            <div class="product-card" data-animal="dog" data-type="toy">
+                <img src="img/02-4.png" alt="骨頭玩具">
+                <h3>【美國DURAFORCE】經典骨頭</h3>
+                <p>NT$420</p>
+                <a href="product-detail.html?product=dog-toy-2" class="btn">查看詳情</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section class="reviews-section">
+    <h2 style="text-align:center; margin-bottom: 30px;">🌟 顧客好評</h2>
+    <div class="reviews-container">
+        <div class="reviews-track">
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">毛孩超愛這家的飼料，換了之後胃口變好很多！</p>
+                <div class="review-info">
+                    <span class="user-name">王小明</span>
+                    <span class="review-date">2025-12-01</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">出貨速度超快，包裝也很完整，推推！</p>
+                <div class="review-info">
+                    <span class="user-name">李曉華</span>
+                    <span class="review-date">2025-12-05</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐</div>
+                <p class="review-text">玩具耐咬度不錯，家裡的黃金獵犬玩得很開心。</p>
+                <div class="review-info">
+                    <span class="user-name">張大衛</span>
+                    <span class="review-date">2025-12-10</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">客服非常有耐心，解答了我對成分的所有疑問。</p>
+                <div class="review-info">
+                    <span class="user-name">陳美美</span>
+                    <span class="review-date">2025-12-12</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">品質真的很棒，已經是第三次回購了！</p>
+                <div class="review-info">
+                    <span class="user-name">林先生</span>
+                    <span class="review-date">2025-12-15</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐</div>
+                <p class="review-text">免運門檻不高，很容易就湊到了，很划算。</p>
+                <div class="review-info">
+                    <span class="user-name">趙小姐</span>
+                    <span class="review-date">2025-12-18</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">寵物零食天然健康，給毛孩吃很放心。</p>
+                <div class="review-info">
+                    <span class="user-name">孫小皮</span>
+                    <span class="review-date">2025-12-20</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">網站介面很漂亮，買東西的心情都變好了。</p>
+                <div class="review-info">
+                    <span class="user-name">賴同學</span>
+                    <span class="review-date">2025-12-22</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">毛孩超愛這家的飼料，換了之後胃口變好很多！</p>
+                <div class="review-info">
+                    <span class="user-name">王小明</span>
+                    <span class="review-date">2025-12-01</span>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
+
+
+
+<footer>
+    <p style="text-align:center; padding: 20px;">&copy; 2025 寵物用品商店 | 設計由賴玟蓁提供</p>
+</footer>
+
+</body>
+</html>

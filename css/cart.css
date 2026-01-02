@@ -1,0 +1,133 @@
+body { font-family: "Noto Sans TC", Arial, sans-serif; background-color: #fafafa; margin:0; padding:0 20px; }
+
+#userMenu {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 14px;
+  gap: 5px;
+}
+
+#userAvatar { font-size:18px; }
+
+.cart-container { padding-top:50px; }
+
+.back-btn { background:none; border:none; font-size:16px; cursor:pointer; margin-bottom:10px; color:#333; }
+.back-btn:hover { text-decoration:underline; }
+
+h2 { text-align:center; font-weight:600; letter-spacing:1px; margin-bottom:20px; }
+
+#cartItems { display:flex; flex-direction:column; gap:15px; margin-bottom:20px; }
+
+.cart-item {
+  display: flex;
+  background:#fff;
+  padding:10px;
+  border-radius:14px;
+  align-items:center;
+  gap:15px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cart-item img {
+  width:80px;
+  height:80px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.cart-info {
+  flex: 1;
+  display: flex;
+  align-items: center; /* 名稱、數量、刪除、小計同一行 */
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.item-name {
+  flex-shrink: 0;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qty button {
+  padding: 2px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #000;      /* 白底黑字 */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* 刪除按鈕獨立樣式 */
+.remove-btn {
+  background-color: #ff4d4f !important; /* 紅色 */
+  color: white !important;              /* 白字 */
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #ff7875 !important;
+}
+
+
+.item-total {
+  font-weight: bold;
+  min-width: 80px;
+  text-align: right;
+}
+
+#summary {
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  font-size:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+#summary p:last-child { font-weight:bold; font-size:18px; }
+
+#checkoutBtn {
+  padding:8px 15px;
+  background-color:#28a745;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+#checkoutBtn:hover { background-color:#218838; }
+
+#emptyCart { text-align:center; font-size:18px; color:#888; display:none; }
+
+/* 手機小螢幕優化 */
+@media screen and (max-width: 480px) {
+  body { padding: 0 10px; }
+  #userMenu { font-size: 12px; padding: 3px 6px; gap: 3px; }
+  .cart-item { flex-direction: column; align-items: flex-start; }
+  .cart-item img { width: 100%; height: auto; }
+  .cart-info { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+  .item-name { flex-basis: 100%; margin-bottom: 5px; }
+  .qty { justify-content: flex-start; width: auto; margin-bottom: 5px; }
+  .item-total { text-align: right; width: 100%; }
+  #summary { flex-direction: column; align-items: flex-start; gap: 10px; }
+  #checkoutBtn { width: 100%; }
+}

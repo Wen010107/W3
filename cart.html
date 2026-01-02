@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的購物車</title>
+
+<link rel="stylesheet" href="css/cart.css">
+<!-- 引入共用 auth.js -->
+<script src="js/auth.js"></script>
+</head>
+<body>
+<!-- 使用者右上角 -->
+<span id="userMenu">
+  <span id="userAvatar"></span>
+  <span id="userName"></span>
+</span>
+<div class="cart-container">
+  <button class="back-btn" onclick="history.back()">← 回上一頁</button>
+  <h2>我的購物車🛒 </h2>
+  <div id="cartItems"></div>
+  <div id="emptyCart">購物車目前沒有商品</div>
+  <div id="summary">
+    <div>
+      <p>總數量: <span id="totalQty">0</span></p>
+      <p>小計: NT$ <span id="subtotal">0</span></p>
+      <p>折扣: NT$ <span id="discount">0</span></p>
+      <p>總計: NT$ <span id="total">0</span></p>
+    </div>
+    <button id="checkoutBtn">結帳</button>
+  </div>
+</div>
+<script src="js/cart.js"></script>
+</body>
+</html>

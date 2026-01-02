@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>會員註冊｜寵物用品商店</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/register.js"></script>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <h1>寵物用品商店</h1>
+</header>
+<!-- 註冊區 -->
+<div class="register-page">
+  <div class="register-card">
+    <h2>🐾 會員註冊</h2>
+    <p>註冊後即可登入查看商品與優惠</p>
+    <!-- 名字欄位 -->
+    <input type="text" id="regName" placeholder="姓名">
+    <!-- 帳號欄位 -->
+    <input type="text" id="regAccount" placeholder="帳號">
+    <!-- 密碼 -->
+    <input type="password" id="regPassword" placeholder="密碼">
+    <!-- 性別 -->
+    <div class="gender-select">
+      <label>
+        <input type="radio" name="gender" value="男">
+        <span>男</span>
+      </label>
+      <label>
+        <input type="radio" name="gender" value="女">
+        <span>女</span>
+      </label>
+    </div>
+    <!-- 頭像選擇 -->
+    <div class="avatar-select">
+      <span class="emoji-avatar" onclick="selectAvatar('😸', this)">😸</span>
+      <span class="emoji-avatar" onclick="selectAvatar('🐶', this)">🐶</span>
+    </div>
+    <!-- 驗證碼 -->
+    <div class="captcha-box">
+      <span id="captchaCode"></span>
+      <button type="button" onclick="generateCaptcha()">換一張</button>
+    </div>
+    <input type="text" id="captchaInput" placeholder="請輸入驗證碼">
+    <button onclick="register()">註冊</button>
+    <div class="register-links">
+      已有帳號？<a href="login.html">立即登入</a>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 寵物用品商店 | All Rights Reserved</p>
+</footer>
+</body>
+</html>
